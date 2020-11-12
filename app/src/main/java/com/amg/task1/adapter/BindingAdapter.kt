@@ -1,6 +1,5 @@
-package com.amg.task1.adapters
+package com.amg.task1.adapter
 
-import android.util.Log
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
