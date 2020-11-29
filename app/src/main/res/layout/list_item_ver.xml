@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/item_height"
         android:layout_margin="@dimen/dimen8dp"
-        android:transitionName="shared_element_container"
         app:cardBackgroundColor="@color/transparent"
         app:shapeAppearance="@style/Widget.Task1.listItem.Corner">
 
@@ -30,6 +29,7 @@
                 android:layout_width="@dimen/match_parent"
                 android:layout_height="@dimen/match_parent"
                 android:scaleType="centerCrop"
+                android:transitionName="@{movie.title}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

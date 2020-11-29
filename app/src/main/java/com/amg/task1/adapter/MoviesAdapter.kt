@@ -1,12 +1,12 @@
 package com.amg.task1.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.amg.task1.model.Movie
 import com.amg.task1.databinding.ListItemHorBinding
 import com.amg.task1.databinding.ListItemVerBinding
+import com.amg.task1.model.Movie
 
 class MoviesAdapter(
     private val movies: List<Movie>,
@@ -26,7 +26,7 @@ class MoviesAdapter(
             binding.executePendingBindings()
 
             binding.root.setOnClickListener {
-                interaction.onItemSelected(movie, binding.root)
+                interaction.onItemSelected(movie, binding.poster)
             }
         }
     }
@@ -43,7 +43,7 @@ class MoviesAdapter(
             binding.executePendingBindings()
 
             binding.root.setOnClickListener {
-                interaction.onItemSelected(movie, binding.root)
+                interaction.onItemSelected(movie, binding.poster)
             }
         }
     }
@@ -89,6 +89,6 @@ class MoviesAdapter(
 
     //We use interface to notify the activity with every selection like onItemSelected , onBookmarkSelected
     interface Interaction {
-        fun onItemSelected(item: Movie, view: View)
+        fun onItemSelected(movie: Movie, imageView: ImageView)
     }
 }
